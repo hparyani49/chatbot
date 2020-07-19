@@ -1,0 +1,108 @@
+.chat-container{
+    background: aliceblue;
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .tabs{
+        display: flex;
+        justify-content: space-between;
+        background: #222f3d;
+        .tab{
+            width: 100%;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 18px;
+            color: #bbbfc3;
+            &.active{
+                color: #333333;
+                background: #eebb25;
+            }
+        }
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 35px;
+        display: flex;
+        padding: 15px;
+        background: #ffffff;    
+        .input-container{
+            width: 81%;
+        }
+        .input{
+            width: calc(100% - 30px);
+            height: 100%;
+            border: 1px solid #ededed;
+            border-radius: 5px;
+            padding: 0 15px;
+            &:active, &:focus{
+                outline: none;
+            }
+        }
+        .send-button{
+            width: 35px;
+            margin-left: 15px;
+            background: #eebb25;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333333;
+        }
+    }
+    .fake-footer{
+        width: 100%;
+        height: 50px;
+    }
+    .chat-scroll-holder{
+        width: 100%;
+        height: 70vh;
+    }
+    .chat-holder{
+        max-height: 100%;
+        overflow: auto;
+        padding: 15px;
+        .message-holder{
+            display: flex;
+            .message{
+                padding: 15px;
+                border-radius: 10px;
+                width: max-content;
+                box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+                margin-bottom: 15px;
+            }
+            &.user{
+                justify-content: flex-end;
+                .message{
+                    background: #f9eab5;
+                }
+            }
+            &.bot{
+                .message{
+                    background:#f0f3f6;
+                }
+            }
+        }
+    }
+}
+.header-top{
+    height: 50px;
+    font-size: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding: 0 15px;
+    background: #333333;
+    color: #ffffff;
+}
+.fake-header{
+    width: 100%;
+    height: 115px;
+}
