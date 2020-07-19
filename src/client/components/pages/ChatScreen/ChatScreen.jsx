@@ -1,19 +1,26 @@
 import React, { useState } from "react";
+import Header from '../Header/Header';
 import "./chat-screen.scss";
+
+const MessageHolder = (props) => {
+    return (
+        <div className={`message-holder ${props.source}`}>
+            <div className='message'>
+                {props.message}
+            </div>
+        </div>
+    )
+}
 
 export default function App() {
     const [inputTxt, setInputTxt] = useState('');
     const [activeTab, setActiveTab] = useState(0);
-    const [messages, setMessages] = useState([
-        {
-            source: "user",
-            message: "Hi"
-        },
-        {
-            source: "bot",
-            message: "Hi there"
-        }
-    ]);
+    const [messages, setMessages] = useState([]);
+    let tabs = [{ iconClass: 'fa-envelope', label: 'CHAT' }, { iconClass: 'fa-envelope', label: 'MY JOBS' }, { iconClass: 'fa-envelope', label: 'PROFILE' }, { iconClass: 'fa-envelope', label: 'LEARN' }];
+
+    const onTabClick = (index) => {
+        alert(tabs[index].label + ' Not Available');
+    }
 
     const messageOnChange = (e) => {
         setInputTxt(e.target.value);
@@ -21,10 +28,10 @@ export default function App() {
 
     const onMessageSend = () => {
         let newMessages = [...messages];
-        let newMsg = {message: inputTxt, source: 'user'};
+        let newMsg = { message: inputTxt, source: 'user' };
         newMessages.push(newMsg);
         onMessage(inputTxt).then((res) => {
-            let botMsg = {message: res.data.botMessage, source: 'bot'};
+            let botMsg = { message: res.data.botMessage, source: 'bot' };
             newMessages.push(botMsg);
             setMessages(newMessages);
             setInputTxt('');
@@ -42,51 +49,15 @@ export default function App() {
     return (
         <div className="App">
             <div className="chat-container">
-                <div className="header">
-                    <div className='header-top'>
-                        <i className='fa fa-wechat'></i>
-                        Job Finder
-                    </div>
-                    <div className="tabs">
-                        <div className={`tab ${activeTab == 0 ? "active" : ""}`}>
-                            <i className="fa fa-envelope" />
-                            <div>CHAT</div>
-                        </div>
-                        <div className={`tab ${activeTab == 1 ? "active" : ""}`} onClick={() => alert('Not Available')}>
-                            <i className="fa fa-envelope" />
-                            <div>MY JOBS</div>
-                        </div>
-                        <div className={`tab ${activeTab == 2 ? "active" : ""}`} onClick={() => alert('Not Available')}>
-                            <i className="fa fa-envelope" />
-                            <div>PROFILE</div>
-                        </div>
-                        <div className={`tab ${activeTab == 3 ? "active" : ""}`} onClick={() => alert('Not Available')}>
-                            <i className="fa fa-envelope" />
-                            <div>LEARN</div>
-                        </div>
-                    </div>
-                </div>
-                <div className='fake-header'></div>
+                <Header heading={'Job Finder'} tabs={tabs} activeTab={0} onTabClick={onTabClick} />
                 <div className='chat-scroll-holder'>
                     <div className='chat-holder'>
                         {messages.map((cur, index) => {
-                            return <div className={`message-holder ${cur.source}`}>
-                                <div className='message'>
-                                    {cur.message}
-                                </div>
-                            </div>
+                            return <MessageHolder {...cur} key={index} />
                         })}
                     </div>
                 </div>
-                <div className='footer'>
-                    <div className='input-container'>
-                        <input className='input' onChange={messageOnChange} value={inputTxt} />
-                    </div>
-                    <div className='send-button' onClick={onMessageSend}>
-                        <i className='fa fa-arrow-circle-right'></i>
-                    </div>
-                </div>
-                <div className='fake-footer'></div>
+                <Footer onChange={messageOnChange} inputVal={inputTxt} onSend={onMessageSend} />
             </div>
         </div>
     );
