@@ -1,14 +1,11 @@
 import React from 'react';
-import Routes from './client/routes';
-import { BrowserRouter } from "react-router-dom";
+import ChatScreen from './client/components/pages/ChatScreen/ChatScreen';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
+      <ChatScreen />
     </div>
   );
 }

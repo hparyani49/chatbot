@@ -16,7 +16,7 @@ export default function App() {
     const [inputTxt, setInputTxt] = useState('');
     const [activeTab, setActiveTab] = useState(0);
     const [messages, setMessages] = useState([]);
-    let tabs = [{ iconClass: 'fa-envelope', label: 'CHAT' }, { iconClass: 'fa-envelope', label: 'MY JOBS' }, { iconClass: 'fa-envelope', label: 'PROFILE' }, { iconClass: 'fa-envelope', label: 'LEARN' }];
+    let tabs = [{ iconClass: 'fa-envelope', label: 'CHAT' }, { iconClass: 'fa-envelope', label: 'MY JOBS' }, { iconClass: 'fa-envelope', label: 'PROFILE' }];
 
     const onTabClick = (index) => {
         alert(tabs[index].label + ' Not Available');
@@ -49,7 +49,7 @@ export default function App() {
     return (
         <div className="App">
             <div className="chat-container">
-                <Header heading={'Job Finder'} tabs={tabs} activeTab={0} onTabClick={onTabClick} />
+                <Header heading={'Job Finder'} tabs={tabs} activeTab={activeTab} onTabClick={onTabClick} />
                 <div className='chat-scroll-holder'>
                     <div className='chat-holder'>
                         {messages.map((cur, index) => {
