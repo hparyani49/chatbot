@@ -7,7 +7,7 @@
     padding: 15px;
     background: #ffffff;    
     .input-container{
-        width: 81%;
+        width: calc(100% - 80px);
     }
     .input{
         width: calc(100% - 30px);

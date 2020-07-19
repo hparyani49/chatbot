@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./footer.scss";
 
 const Header = (props) => {
@@ -6,7 +6,7 @@ const Header = (props) => {
         <>
             <div className='footer'>
                 <div className='input-container'>
-                    <input className='input' onChange={props.onChange} value={props.inputVal} />
+                    <input className='input' onChange={props.onChange} value={props.inputVal} placeholder='Type message' />
                 </div>
                 <div className='send-button' onClick={props.onSend}>
                     <i className='fa fa-arrow-circle-right'></i>

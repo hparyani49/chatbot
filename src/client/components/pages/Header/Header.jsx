@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.scss";
 
 const Header = (props) => {
@@ -10,9 +10,9 @@ const Header = (props) => {
                     {props.heading}
                 </div>
                 <div className="tabs">
-                    {props.tab.map((cur, index) => {
+                    {props.tabs.map((cur, index) => {
                         return (
-                            <div className={`tab ${props.activeTab == 0 ? "active" : ""}`}>
+                            <div className={`tab ${props.activeTab == index ? "active" : ""}`} onClick={() => props.onTabClick(index)}>
                                 <i className={`fa ${cur.iconClass}`} />
                                 <div>{cur.label}</div>
                             </div>
