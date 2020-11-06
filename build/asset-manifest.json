@@ -1,22 +1,33 @@
 {
   "files": {
-    "main.css": "/chat-bot/static/css/main.551d583e.chunk.css",
-    "main.js": "/chat-bot/static/js/main.04ae25bc.chunk.js",
-    "main.js.map": "/chat-bot/static/js/main.04ae25bc.chunk.js.map",
-    "runtime-main.js": "/chat-bot/static/js/runtime-main.5b3c1a9d.js",
-    "runtime-main.js.map": "/chat-bot/static/js/runtime-main.5b3c1a9d.js.map",
-    "static/js/2.797e2cc3.chunk.js": "/chat-bot/static/js/2.797e2cc3.chunk.js",
-    "static/js/2.797e2cc3.chunk.js.map": "/chat-bot/static/js/2.797e2cc3.chunk.js.map",
-    "index.html": "/chat-bot/index.html",
-    "precache-manifest.b20247f5d8c9398b300e14708d9ddca2.js": "/chat-bot/precache-manifest.b20247f5d8c9398b300e14708d9ddca2.js",
-    "service-worker.js": "/chat-bot/service-worker.js",
-    "static/css/main.551d583e.chunk.css.map": "/chat-bot/static/css/main.551d583e.chunk.css.map",
-    "static/js/2.797e2cc3.chunk.js.LICENSE.txt": "/chat-bot/static/js/2.797e2cc3.chunk.js.LICENSE.txt"
+    "main.css": "/surprise/static/css/main.a0558f24.chunk.css",
+    "main.js": "/surprise/static/js/main.e66c1bed.chunk.js",
+    "main.js.map": "/surprise/static/js/main.e66c1bed.chunk.js.map",
+    "runtime-main.js": "/surprise/static/js/runtime-main.625c76e6.js",
+    "runtime-main.js.map": "/surprise/static/js/runtime-main.625c76e6.js.map",
+    "static/js/2.3cbeaabf.chunk.js": "/surprise/static/js/2.3cbeaabf.chunk.js",
+    "static/js/2.3cbeaabf.chunk.js.map": "/surprise/static/js/2.3cbeaabf.chunk.js.map",
+    "index.html": "/surprise/index.html",
+    "precache-manifest.dc8b3b75183543ddc5ac9155023736ce.js": "/surprise/precache-manifest.dc8b3b75183543ddc5ac9155023736ce.js",
+    "service-worker.js": "/surprise/service-worker.js",
+    "static/css/main.a0558f24.chunk.css.map": "/surprise/static/css/main.a0558f24.chunk.css.map",
+    "static/js/2.3cbeaabf.chunk.js.LICENSE.txt": "/surprise/static/js/2.3cbeaabf.chunk.js.LICENSE.txt",
+    "static/media/Family.jpg": "/surprise/static/media/Family.37d1d6bb.jpg",
+    "static/media/High.jpg": "/surprise/static/media/High.9cd5ec2c.jpg",
+    "static/media/audio.mp3": "/surprise/static/media/audio.4100af4b.mp3",
+    "static/media/chillichatka.jpg": "/surprise/static/media/chillichatka.31d24fbd.jpg",
+    "static/media/cool.jpg": "/surprise/static/media/cool.cf498701.jpg",
+    "static/media/dhakkan.jpg": "/surprise/static/media/dhakkan.82466647.jpg",
+    "static/media/dhinchakamisha.jpg": "/surprise/static/media/dhinchakamisha.0dcbbb03.jpg",
+    "static/media/elegance.jpg": "/surprise/static/media/elegance.52bf67b5.jpg",
+    "static/media/gharelu.jpg": "/surprise/static/media/gharelu.9c164601.jpg",
+    "static/media/harami.jpg": "/surprise/static/media/harami.2b9d944b.jpg",
+    "static/media/we.jpg": "/surprise/static/media/we.57b7f615.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b3c1a9d.js",
-    "static/js/2.797e2cc3.chunk.js",
-    "static/css/main.551d583e.chunk.css",
-    "static/js/main.04ae25bc.chunk.js"
+    "static/js/runtime-main.625c76e6.js",
+    "static/js/2.3cbeaabf.chunk.js",
+    "static/css/main.a0558f24.chunk.css",
+    "static/js/main.e66c1bed.chunk.js"
   ]
 }
